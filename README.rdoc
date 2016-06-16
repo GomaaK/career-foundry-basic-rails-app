@@ -5,5 +5,3 @@ My name is George and I'm working on becoming a front-end web developer.
 This is my first Ruby on Rails app.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
