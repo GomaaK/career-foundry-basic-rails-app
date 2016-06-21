@@ -2,24 +2,47 @@
 <html>
 <head>
   <title>Basicrailsapp</title>
+  <meta name="viewport"  content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<nav class="nav">
-	<ul>
-		<li>Home</li>
-		<li>About</li>
-		<li>Contact</li>
-	</ul>
-</nav>
+<div class="content-wrap">
+  <header class="header">
+    <div class="row">
+      <div class="container-fluid">
+        <div class="col-xs-6 h2 brand-logo">Bullock's Bikes Berlin</div>
+        <nav class="col-xs-6 navbar default-navbar">
+          <ul class="nav__list h4">
+            <li class="nav__list-item">Home</li>
+            <li class="nav__list-item">Shop Bikes</li>
+            <li class="nav__list-item">Our Story</li>
+            <li class="nav__list-item">Contact Us</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<%= yield %>
+  <%= yield %>
+</div><!--  end content wrap -->  
 
-<footer>
-	&copy; 2016 Baseline Bullock
+<footer class="footer">
+  <div class="row">	
+    <div class="container-fluid">
+      <div class="col-xs-6">
+        <p class="footer__brand">Made in Berlin by <a class="footer-link" href="http://www.twitter.com/george_bullock">George Bullock</a></p>
+      </div> 
+      <div class="col-xs-6">
+        <p class="footer__copyright">&copy; 2016 Baseline Bullock Development</p>
+      </div>      
+    </div>
+  </div> 
 </footer>
 
 </body>

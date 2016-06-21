@@ -1,3 +1,102 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//Layout variables 
+$heading-font-stack: "Baloo", arial;
+$body-font-stack: "Roboto", sans-serif;
+$body-background-color: #F2E1C2;
+$footer-background-color: #81A677; 
+$body-text-color: #697F8C;
+$hyperlink-color: #BF4E4E;
+
+
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	background-color: $body-background-color;
+	color: $body-text-color;
+	font-family: $body-font-stack;
+}
+
+.content-wrap {
+	min-height: 100%;
+	margin-bottom: -150;
+}
+
+.content-wrap:after {
+	content: "";
+	display: block;
+}
+
+@mixin header-item-base-style {
+	color: #BF4E4E;
+	display: inline-block;
+}
+
+.brand-logo {
+	@include header-item-base-style;
+	font-family: $heading-font-stack;
+}
+
+.navbar-default {
+	background-color: $body-background-color;
+	border: none;
+}
+
+.nav__list {
+	float: right;
+}
+
+.nav__list-item {
+	@include header-item-base-style;
+	padding: 13px 10px;
+}
+
+.main-headline {
+	font-family: $body-font-stack;
+	font-weight: 700
+}
+
+.sub-headline {
+	font-family: $body-font-stack; 
+}
+
+.footer, .content-wrap:after {
+	height: 150px;
+}
+
+.footer {
+	background-color: $footer-background-color;
+}
+
+@mixin footer-elements {
+	color: #D0D991;
+	padding: 120px 0 0 20px;
+}
+
+.footer__brand {
+	@include footer-elements;
+}
+
+.footer__copyright {
+	@include footer-elements;	
+	float: right;
+	margin-right: 20px;
+}
+
+.footer-link {
+	color: #F2E1C2;
+	text-decoration: none;
+}
+
+.footer-link:hover {
+	@extend .footer-link;
+	color: #D0D991;
+	transition: 800ms;
+}
+
