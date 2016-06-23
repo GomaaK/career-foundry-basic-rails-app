@@ -11,10 +11,14 @@ $footer-background-color: #81A677;
 $body-text-color: #697F8C;
 $hyperlink-color: #BF4E4E;
 
+* {
+	box-sizing: border-box;
+}
 
 html, body {
 	margin: 0;
 	height: 100%;
+	// overflow-x: hidden;
 }
 
 body {
