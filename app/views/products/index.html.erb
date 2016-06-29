@@ -1,90 +1,22 @@
-<div class="container">
-  <div class="row">
-      <p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class="row">
       <div class="col-xs-12">
         <h1>Browse Bikes</h1>
-        
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
+      </div><!-- end col -->
+    </div><!-- end row -->  
+  </div><!-- end container -->
 
-          <tbody>
-            <% @products.each do |product| %>
-              <tr>
-                <td><%= product.name %></td>
-                <td><%= product.description %></td>
-                <td><%= product.image_url %></td>
-                <td><%= link_to 'Show', product %></td>
-                <td><%= link_to 'Edit', edit_product_path(product) %></td>
-                <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-
-        <br>
-
-      </div><!--  end column -->
-      
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-      
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-      <div class="col-xs-12 col-md-4">
-        <a href="#" class="product">
-          <%= image_tag("product-thumbnail.png", alt:"racing bike thumbnail image", class: "img-responsive center-block") %>
-        </a>
-      </div><!-- end thumbnail image -->
-
-  </div><!-- end row -->
-</div><!--  end content container -->
+  <div class="container">  
+    <div class="row">   
+      <% @products.each do |product| %>  
+        <div class="col-xs-12 col-md-4">
+          <a href="#" class="product">
+            <%= image_tag(product.image_url, class: "img-responsive") %>
+          </a>
+          <h3><%= product.name %></h3>
+          <p><%= product.description %></p>
+          <p><%= product.price %></p>  
+        </div><!-- end thumbnail image -->
+      <% end %><!-- end product loop -->
+    </div><!-- end row -->
+  </div><!--  end content container -->
