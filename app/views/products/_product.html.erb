@@ -1,0 +1,10 @@
+<% @products.each do |product| %>  
+  <div class="col-xs-12 col-md-4">
+    <a href="#" class="product">
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+    </a>
+    <h3><%= product.name %></h3>
+    <p><%= product.description %></p>
+    <p><%= product.price %></p>  
+  </div><!-- end thumbnail image -->
+<% end %><!-- end product loop -->
