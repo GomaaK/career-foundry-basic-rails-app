@@ -3,8 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def landing_page
-  	@featured_product = Product.first
-  	@products = Product.limit(5)
+  	redirect_to static_pages_index_path
+  	# @featured_product = Product.first
+  	# @products = Product.limit(5)
   end
 
 end

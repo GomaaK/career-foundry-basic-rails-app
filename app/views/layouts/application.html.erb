@@ -16,12 +16,12 @@
   <header class="header">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-6 h2 brand-logo">Bullock's Bikes Berlin</div>
+        <div class="col-xs-6"><%= link_to "Bullock's Bikes Berlin", static_pages_index_path, :class => "h2 brand-logo" %></div>
         <nav class="col-xs-6 navbar default-navbar">
           <ul class="nav__list h4">
-            <li class="nav__list-item">Home</li>
-            <li class="nav__list-item">Our Story</li>
-            <li class="nav__list-item">Contact Us</li>
+            <li class="nav__list-item"><%= link_to "Home", static_pages_index_path %></li>
+            <li class="nav__list-item"><%= link_to "Our Story", static_pages_about_path %></li>
+            <li class="nav__list-item"><%= link_to "Contact Us", static_pages_contact_path %></li>
           </ul>
         </nav>
       </div>
