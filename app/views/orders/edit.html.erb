@@ -1,0 +1,24 @@
+<section class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="main-headline">Update Product Price</h1>
+			<p>Use the form below to update a products price via its product ID number</p>
+			
+			<%= form_for(@product) do |f| %>
+				<div class="field">
+					<%= f.label :id %>
+					<%= f.text_field :id %>
+				</div>
+				
+				<div class="field">
+					<%= f.label :price %>
+					<%= f.text_field :price %>
+				</div>
+
+				<div class="actions">
+					<%= f.submit %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>
