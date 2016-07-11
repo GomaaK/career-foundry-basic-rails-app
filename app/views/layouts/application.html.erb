@@ -30,10 +30,22 @@
             <li class="nav__list-item"><%= link_to "Our Story", static_pages_about_path %></li>
             <li class="nav__list-item"><%= link_to "Contact Us", static_pages_contact_path %></li>
           </ul>
+          <ul class="nav pull-right">
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
   </header>
+  
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <%= yield %>
 </div><!--  end content wrap -->  
