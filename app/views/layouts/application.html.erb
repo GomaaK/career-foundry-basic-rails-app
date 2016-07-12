@@ -43,9 +43,14 @@
       </div>
     </div>
   </header>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    
+
+<% if notice %>
+    <p id="notice" class="h2 text-center alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert %>
+    <p id="notice" class="h2 text-center alert alert-info>"><%= alert %></p>
+<% end %>  
 
   <%= yield %>
 </div><!--  end content wrap -->  

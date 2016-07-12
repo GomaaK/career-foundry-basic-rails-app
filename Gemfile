@@ -49,5 +49,9 @@ group :production do
 	gem 'pg'
 end
 
+#Use Devise for user authentication
 gem 'devise'
+
+#Use CanCanCan for authentication
+gem 'cancancan'
 
