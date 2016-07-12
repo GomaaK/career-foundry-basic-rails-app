@@ -54,7 +54,7 @@ body {
 
 .nav__search {
 	display: inline-block;
-	padding: 20px 0 20px 50px;
+	padding: 20px 0 20px 150px;
 }
 
 .nav__list {
@@ -69,6 +69,7 @@ body {
 .main-headline {
 	font-family: $body-font-stack;
 	font-weight: 700;
+	clear: both;
 }
 
 .sub-headline {

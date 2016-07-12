@@ -16,8 +16,8 @@
   <header class="header">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-6"><%= link_to "Bullock's Bikes Berlin", static_pages_index_path, :class => "h2 brand-logo" %></div>
-        <nav class="col-xs-6 navbar default-navbar">
+        <div class="col-xs-4"><%= link_to "Bullock's Bikes Berlin", static_pages_index_path, :class => "h2 brand-logo" %></div>
+        <nav class="col-xs-8 navbar default-navbar">
           <div class="nav__search">  
               <%= form_tag( "/products", method: "get") do %>
               <%= label_tag(:q, "Search") %>
@@ -29,9 +29,7 @@
             <li class="nav__list-item"><%= link_to "Home", static_pages_index_path %></li>
             <li class="nav__list-item"><%= link_to "Our Story", static_pages_about_path %></li>
             <li class="nav__list-item"><%= link_to "Contact Us", static_pages_contact_path %></li>
-          </ul>
-          <ul class="nav pull-right">
-            <li>
+            <li class="nav__list-item">
               <% if user_signed_in? %>
                 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
               <% else %>
@@ -44,28 +42,28 @@
     </div>
   </header>
     
-
-<% if notice %>
-    <p id="notice" class="h2 text-center alert alert-info"><%= notice %></p>
-<% end %>
-<% if alert %>
-    <p id="notice" class="h2 text-center alert alert-info>"><%= alert %></p>
-<% end %>  
-
+  <% if notice %>
+      <p id="notice" class="h2 text-center alert alert-info"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+      <p id="notice" class="h2 text-center alert alert-info>"><%= alert %></p>
+  <% end %>  
+    
   <%= yield %>
+
 </div><!--  end content wrap -->  
 
 <footer class="footer">
-  <div class="container-fluid">	
-    <div class="row">
-      <div class="col-xs-6">
-        <p class="footer__brand">Made in Berlin by <a class="footer-link" href="http://www.twitter.com/george_bullock">George Bullock</a></p>
-      </div> 
-      <div class="col-xs-6">
-        <p class="footer__copyright">&copy; 2016 Baseline Bullock Development</p>
-      </div>      
-    </div>
-  </div> 
+    <div class="container-fluid">	
+      <div class="row">
+        <div class="col-xs-6">
+          <p class="footer__brand">Made in Berlin by <a class="footer-link" href="http://www.twitter.com/george_bullock">George Bullock</a></p>
+        </div> 
+        <div class="col-xs-6">
+          <p class="footer__copyright">&copy; 2016 Baseline Bullock Development</p>
+        </div>      
+      </div>
+    </div> 
 </footer>
 
 </body>
