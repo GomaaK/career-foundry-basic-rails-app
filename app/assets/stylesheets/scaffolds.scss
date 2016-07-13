@@ -25,7 +25,7 @@ a {
     color: #BF4E4E;
   }
 
-  &:hover {
+  &:hover, &:focus {
     color: #F28181;
     background-color: none;
     text-decoration: none;

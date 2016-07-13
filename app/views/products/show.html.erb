@@ -1,29 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="h2">
+        <%= @product.name %>
+      </h1>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<section class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <%= image_tag("bike.png", alt:"Racing bike image", class: "img-responsive center-block") %>
+    </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+    <div class="col-xs-6">
+      <p class="h3">
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @product.colour %>
-</p>
+      <p class="h4">
+        Color: <%= @product.colour %>
+      </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @product.price %>
-</p>
+      <p class="h4">
+        Price: <%= @product.price %> EUR
+      </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+    </div>
+  </div>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</section>
+
