@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new
@@ -64,6 +65,10 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def average_rating
+    comments.average(:rating).to_f
   end
 
   private
