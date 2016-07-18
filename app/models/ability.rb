@@ -10,5 +10,4 @@ class Ability
     	cannot :destroy, Comment
 		end	 
   end
-  
 end

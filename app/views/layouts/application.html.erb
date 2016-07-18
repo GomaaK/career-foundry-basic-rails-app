@@ -16,10 +16,10 @@
   <header class="header">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-4"><%= link_to "Bullock's Bikes Berlin", static_pages_index_path, :class => "h2 brand-logo" %></div>
-        <nav class="col-xs-8 navbar default-navbar">
+        <div class="col-xs-3"><%= link_to "Bullock's Bikes Berlin", static_pages_index_path, :class => "h2 brand-logo" %></div>
+        <nav class="col-xs-9 navbar default-navbar">
           <div class="nav__search">  
-              <%= form_tag( "/products", method: "get") do %>
+            <%= form_tag( "/products", method: "get") do %>
               <%= label_tag(:q, "Search") %>
               <%= text_field_tag(:q) %>
               <%= submit_tag("Search") %>
@@ -27,7 +27,7 @@
           </div>  
           <ul class="nav__list h4">
             <li class="nav__list-item"><%= link_to "Home", static_pages_index_path %></li>
-           
+            <li class="nav__list-item"><%= link_to "Shop Products", products_path %></li>
             <li class="nav__list-item"><%= link_to "Our Story", static_pages_about_path %></li>
             <li class="nav__list-item"><%= link_to "Contact Us", static_pages_contact_path %></li>
             <li class="nav__list-item">
