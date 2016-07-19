@@ -20,7 +20,6 @@
         <nav class="col-xs-9 navbar default-navbar">
           <div class="nav__search">  
             <%= form_tag( "/products", method: "get") do %>
-              <%= label_tag(:q, "Search") %>
               <%= text_field_tag(:q) %>
               <%= submit_tag("Search") %>
             <% end %>
