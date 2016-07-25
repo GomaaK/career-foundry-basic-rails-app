@@ -2,8 +2,11 @@ require 'rails_helper'
 
 describe UsersController, :type => :controller do
 
-  @user_1 = let(:user) { User.create!(email: "george@bullocksbikes.com", password: "123456") }
-  @user_2 = let(:user) { User.create!(email: "support@bullocksbikes.com", password: "123456") }
+  # @user_1 = let(:user) { User.create!(email: "george@bullocksbikes.com", password: "123456") }
+  # @user_2 = let(:user) { User.create!(email: "support@bullocksbikes.com", password: "123456") }
+  @user_1 = FactoryGirl.create(:user)
+  @user_2 = FactoryGirl.create(:user)
+
 
   describe "GET #show" do
     before "User is logged in" do

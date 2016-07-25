@@ -56,5 +56,5 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   #This line is allows the Rspec testing suite to perform functional tests
-  config.include Devise::Test::ControllerHelpers, :type => :controller 
+  config.include Devise::Test::ControllerHelpers  , :type => :controller 
 end

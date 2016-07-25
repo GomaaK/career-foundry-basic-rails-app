@@ -34,7 +34,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+  # Use rspec for unit and functional testing 
   gem 'rspec-rails', '~> 3.4'
+  # Use factory_girl to create testing factories 
+  gem "factory_girl_rails", "~> 4.0"
+
 end
 
 group :development do
@@ -50,12 +54,13 @@ group :production do
 	gem 'pg'
 end
 
-#Use Devise for user authentication
+# Use Devise for user authentication
 gem 'devise'
 
-#Use CanCanCan for authentication
+# Use CanCanCan for authentication
 gem 'cancancan'
 
-## Gemfile for Rails 3+, Sinatra, or Merb
+# Use will_paginate for pagincation 
 gem 'will_paginate', '~> 3.0.5'
+
 
