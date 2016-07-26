@@ -67,4 +67,5 @@ gem 'cancancan'
 # Use will_paginate for pagincation 
 gem 'will_paginate', '~> 3.0.5'
 
-
+#Use Stripe for payments 
+gem 'stripe'

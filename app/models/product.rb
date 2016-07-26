@@ -6,6 +6,10 @@ class Product < ActiveRecord::Base
     comments.average(:rating).to_f
   end	
 
+  def stripe_price_conversion
+  	$stripe_conversion_factor = 100
+  end 	
+
 	validates :name, presence: true
 
 end

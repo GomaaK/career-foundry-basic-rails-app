@@ -47,10 +47,15 @@
       <p class="h4">
         Price: <%= @product.price %> EUR
       </p>
-
+      
       <p>Average Rating:<div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+      
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+
       <% if can? :manage, @product %>
-        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Edit', edit_product_path(@product) %> 
         <%= link_to 'Back', products_path %>
       <% end %>  
     </div>
