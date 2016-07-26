@@ -5,4 +5,5 @@
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
   data-amount="<%= @product.price.to_i * @product.stripe_price_conversion %>">
-</script>
+</script> 
+<%= hidden_field_tag(:product_id, @product.id) %>

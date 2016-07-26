@@ -17,5 +17,4 @@ class StaticPagesController < ApplicationController
 	      :subject => "A new contact form message from #{@name}",
 	      :body => @message).deliver_now
 	end
-
 end
