@@ -4,9 +4,10 @@ describe UsersController, :type => :controller do
 
   # @user_1 = let(:user) { User.create!(email: "george@bullocksbikes.com", password: "123456") }
   # @user_2 = let(:user) { User.create!(email: "support@bullocksbikes.com", password: "123456") }
-  @user_1 = FactoryGirl.create(:user)
-  @user_2 = FactoryGirl.create(:user)
-
+  before do
+    @user_1 = FactoryGirl.create(:user)
+    @user_2 = FactoryGirl.create(:user)
+  end  
 
   describe "GET #show" do
     context "User is logged in" do
@@ -15,23 +16,23 @@ describe UsersController, :type => :controller do
       end
       
       it "loads correct user details" do 
-        get :show, id: user.id
+        get :show, id: @user_1.id
         expect(response).to be_success
         expect(response).to have_http_status(200)
-        expect(assigns(:user)).to eq user
+        expect(assigns(:user)).to eq @user_1
       end
 
       it "tries to access user_2 details" do
         get :show, id: @user_2
         expect(response).to redirect_to(root_path)
-      end  
-    end  
+      end
+    end
 
     context "No user is logged in" do 
       it "redirects to login" do
-        get :show, id: user.id
-        expect(response).to redirect_to(root_path)
+        get :show, id: @user_2
+        expect(response).to redirect_to(new_user_session_path)
       end
     end
-  end 
+  end
 end
