@@ -9,8 +9,10 @@ describe UsersController, :type => :controller do
 
 
   describe "GET #show" do
-    before "User is logged in" do
-      sign_in user_1
+    context "User is logged in" do
+      before do
+        sign_in @user_1
+      end
       
       it "loads correct user details" do 
         get :show, id: user.id
@@ -20,12 +22,12 @@ describe UsersController, :type => :controller do
       end
 
       it "tries to access user_2 details" do
-        get :show, id: user_2
+        get :show, id: @user_2
         expect(response).to redirect_to(root_path)
       end  
     end  
 
-    before "No user is logged in" do 
+    context "No user is logged in" do 
       it "redirects to login" do
         get :show, id: user.id
         expect(response).to redirect_to(root_path)
