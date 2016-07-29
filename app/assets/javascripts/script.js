@@ -14,5 +14,7 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".zoom_img").elevateZoom();
+
 });
 

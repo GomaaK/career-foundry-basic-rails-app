@@ -1,7 +1,6 @@
 def create
 	
 	@product = params[:product_id]
-
 	@user = current_user
 
 	# Set your secret key: remember to change this to your live secret key in production
@@ -14,13 +13,19 @@ def create
 	# Create the charge on Stripe's servers - this will charge the user's card
 	begin
 	  charge = Stripe::Charge.create(
-	    :amount => @product.price.to_i * @product.stripe_price_conversion  # amount in cents, again
-	    :currency => "eur",
+	    :amount => @product.price.to_i * @product.stripe_price_conversion,  # amount in cents, again
+	    :currency => "EUR",
 	    :source => token,
-	    :description => "Example charge"
+	    :description => @product.description
 	  )
+	 	 
+	  if charge.paid
+  		Order.create()
+		end
+
 	rescue Stripe::CardError => e
 	  # The card has been declined
 	end	
-		redirect_to static_pages_thank_you
+		redirect_to static_pages_thank_you_path
+
 end

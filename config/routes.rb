@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-  
+
+  get 'payments/thank_you'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
