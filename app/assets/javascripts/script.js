@@ -1,5 +1,4 @@
-$(document).ready(function(){
-	
+var refreshRating = function(){ 
 	$(".alert")
 	.delay(5000)
 	.fadeOut(1000);
@@ -13,7 +12,10 @@ $(document).ready(function(){
 			return $(this).attr("data-score");
 		}
 	});
+};	
 
+$(document).ready(function(){
+	refreshRating();
 	$(".zoom_img").elevateZoom();
 
 });

@@ -21,3 +21,6 @@
 */.DS_Store
 */*/.DS_Store
 */*/*/.DS_Store
+
+#Ignore all byebug files
+.byebug_history
