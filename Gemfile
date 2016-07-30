@@ -69,3 +69,6 @@ gem 'will_paginate', '~> 3.0.5'
 
 #Use Stripe for payments 
 gem 'stripe'
+
+#Memcached setup 
+gem 'dalli'

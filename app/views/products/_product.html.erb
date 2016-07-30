@@ -1,8 +1,10 @@
-<div class="col-xs-12 col-md-4">
-  <%= link_to product do %>
-    <%= image_tag(product.image_url, class: "img-responsive") %>
-  <% end %>
-  <h3><%= product.name %></h3>
-  <p><%= product.description %></p>
-  <p><%= product.price %></p>  
-</div><!-- end thumbnail image -->
+<% cache product do %>
+	<div class="col-xs-12 col-md-4">
+	  <%= link_to product do %>
+	    <%= image_tag(product.image_url, class: "img-responsive") %>
+	  <% end %>
+	  <h3><%= product.name %></h3>
+	  <p><%= product.description %></p>
+	  <p><%= product.price %></p>  
+	</div><!-- end thumbnail image -->
+<% end %>
