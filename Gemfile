@@ -72,3 +72,6 @@ gem 'stripe'
 
 #Memcached setup 
 gem 'dalli'
+
+#Install redis
+gem 'redis-rails'

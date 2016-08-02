@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'payments/thank_you'
 
+  resources :payments, only: [:create]
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
