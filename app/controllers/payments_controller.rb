@@ -2,9 +2,7 @@ class PaymentsController < ApplicationController
 
 	def create
 		
-		@product_id = params[:product_id]
-		@product_price = params[:price]
-		@product_description = params[:description]
+		@product = Product.find params[:product_id]
 		@user = current_user
 
 		# Set your secret key: remember to change this to your live secret key in production
@@ -17,10 +15,10 @@ class PaymentsController < ApplicationController
 		# Create the charge on Stripe's servers - this will charge the user's card
 		begin
 		  charge = Stripe::Charge.create(
-		    :amount => @product_price,  # amount in cents, again
+		    :amount => (@product.price * 100).to_i,  # amount in cents, again
 		    :currency => "EUR",
 		    :source => token,
-		    :description => @product_description
+		    :description => @product.description
 		  )
 		 	 
 		  if charge.paid
