@@ -28,8 +28,12 @@ class PaymentsController < ApplicationController
 		rescue Stripe::CardError => e
 		  # The card has been declined
 		end	
-			redirect_to static_pages_thank_you_path
-
+			redirect_to payments_thank_you_path
 	end
+
+end
+
+
+def thank_you
 
 end
