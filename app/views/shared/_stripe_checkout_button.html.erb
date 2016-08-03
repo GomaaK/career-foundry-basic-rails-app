@@ -1,4 +1,4 @@
-<%= @product.id %>
+<%= hidden_field_tag(@product.id) %>
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
