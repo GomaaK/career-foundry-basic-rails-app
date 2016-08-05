@@ -3,10 +3,10 @@ var refreshRating = function(){
 	.delay(5000)
 	.fadeOut(1000);
 
-	$(".rating").raty({path: "/assets", scoreName: "comment[rating]"});
+	$(".rating").raty({path: "/assets/javascripts", scoreName: "comment[rating]"});
 
 	$(".rated").raty({
-		path: "/assets",
+		path: "/assets/javascripts",
 		readOnly: true,
 		score: function(){
 			return $(this).attr("data-score");
@@ -17,6 +17,5 @@ var refreshRating = function(){
 $(document).ready(function(){
 	refreshRating();
 	$(".zoom_img").elevateZoom();
-
 });
 
