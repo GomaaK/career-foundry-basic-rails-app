@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load'function(){
+$(document).ready(function(){
 	$("#new_comment").html("Thank you for your review!");
 	$(".product-reviews").prepend("<%= j render @comment %>");
 	refreshRating();	

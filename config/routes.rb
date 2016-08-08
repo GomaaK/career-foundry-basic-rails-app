@@ -7,11 +7,11 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  # mount ActionCable.server => '/cable'
+  resources :payments, only: [:create]
+
+  mount ActionCable.server => '/cable'
 
   get 'payments/thank_you'
-
-  resources :payments, only: [:create]
 
   get 'static_pages/about'
 
