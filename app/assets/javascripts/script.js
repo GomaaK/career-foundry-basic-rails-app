@@ -3,10 +3,10 @@ var refreshRating = function(){
 	.delay(5000)
 	.fadeOut(1000);
 
-	$(".rating").raty({path: "/assets/javascripts", scoreName: "comment[rating]"});
+	$(".rating").raty({path: "/assets", scoreName: "comment[rating]"});
 
 	$(".rated").raty({
-		path: "/assets/javascripts",
+		path: "/assets",
 		readOnly: true,
 		score: function(){
 			return $(this).attr("data-score");
@@ -14,7 +14,7 @@ var refreshRating = function(){
 	});
 };	
 
-$(document).ready(function(){
+$(document).on('turbolinks:load' function(){
 	refreshRating();
 	$(".zoom_img").elevateZoom();
 });

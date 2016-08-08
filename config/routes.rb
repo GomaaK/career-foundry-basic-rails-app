@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  # mount ActionCable.server => '/cable'
+
   get 'payments/thank_you'
 
   resources :payments, only: [:create]
@@ -79,3 +81,4 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 end
+
