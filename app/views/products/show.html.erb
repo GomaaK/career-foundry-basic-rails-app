@@ -11,7 +11,8 @@
 </div>
 
 <section class="container">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
+    
     <div class="col-xs-6">
       <%= image_tag("bike.png", alt:"Racing bike image", class: "img-responsive center-block zoom_img", data_zoom_image: "bike.png") %>
         <div class="form-group">  
