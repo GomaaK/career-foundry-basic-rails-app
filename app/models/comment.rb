@@ -8,3 +8,4 @@ class Comment < ActiveRecord::Base
   validates :rating, numericality: { only_integer: true }
   after_create_commit { CommentUpdateJob.perform_later(self, @user) }
 end
+	
