@@ -29,8 +29,9 @@ class PaymentsController < ApplicationController
 		end	
 			redirect_to payments_thank_you_path
 	end
+
+	def thank_you
+
+	end
 end
 
-def thank_you
-
-end
