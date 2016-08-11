@@ -1,7 +1,6 @@
 class PaymentsController < ApplicationController
 
 	def create
-		
 		@product = Product.find params[:product_id]
 		@user = current_user
 
@@ -30,9 +29,7 @@ class PaymentsController < ApplicationController
 		end	
 			redirect_to payments_thank_you_path
 	end
-
 end
-
 
 def thank_you
 

@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+	
 	has_many :orders
 	has_many :comments
 
@@ -11,6 +12,5 @@ class Product < ActiveRecord::Base
   end 	
 
 	validates :name, presence: true
-
 end
 

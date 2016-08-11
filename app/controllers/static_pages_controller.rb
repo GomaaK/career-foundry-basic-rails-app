@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
+  
   end
 
   def landing_page
@@ -13,8 +14,8 @@ class StaticPagesController < ApplicationController
 	  @email = params[:email]
 	  @message = params[:message]
 	  ActionMailer::Base.mail(:from => @email,
-	      :to => 'your-email@example.com',
-	      :subject => "A new contact form message from #{@name}",
-	      :body => @message).deliver_now
+	    :to => 'your-email@example.com',
+	    :subject => "A new contact form message from #{@name}",
+	    :body => @message).deliver_now
 	end
 end

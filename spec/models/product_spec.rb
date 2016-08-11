@@ -1,8 +1,7 @@
 require 'rails_helper'
+
 describe Product do
-
   context "when product has comments" do
-
     before do
       @product = Product.create(name: "racing bike")
       @user = FactoryGirl.create(:user)
@@ -16,3 +15,5 @@ describe Product do
     end
   end
 end
+
+
